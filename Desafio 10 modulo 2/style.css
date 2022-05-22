@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+/* utf-8 para aceitar pontuaçoes */
+
+/* esse * aqui no começo é para zerar todas as configurações dos navegadores.*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Importando uma fonte do google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+/* Importando uma fonte do computador*/
+
+@font-face {
+    font-family: 'guanabarafont';
+    src: url(fontes/idroid.otf);
+    
+    
+}
+
+/* Poderia ter usado root para as cores, porém fui aprender mais afundo sobre
+o assunto depois que fiz o desafio, eu precisei aprender a resposividade do video, assistindo o Guanabara fazendo, pois não sabia como fazer ainda. */
+
+/* cor para degrade do header #3cd782 e #1a5c38
+   cor para laterais main #84e1ad
+   cor para degrade nos h2 #c9edd9
+   cor para box final #2fa866
+   cor para parte de baixo do box final #c5ebd6
+
+*/
+
+nav {
+    
+    padding: 10px;
+    text-align: left;
+    background-color: #1a5c38;
+    
+    
+}
+
+/* hover é para o mouse passar em cima e ter uma animação transition-duration é o tempo da animação, border radius para ter uma borda e nao ficar quadradão*/
+nav > a:hover {
+    background-color: #a8f8cc;
+    color: #11472a;
+    transition-duration: 0.5s;
+    border-radius: 8%;
+    
+
+}
+
+a {
+    text-decoration: none; 
+    color: white;
+    padding: 10px;
+    
+    
+}
+/* background image: linar gradiente é para fazer um degrade com as cores.*/
+header {
+    background-image: linear-gradient(to top, #1a5c38,#3cd782);
+    height: 185px;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+    font-family: 'Macondo', cursive; 
+}
+
+h2 {
+    text-align: center;
+    padding-top: 25px;
+    color: white;
+}
+
+.lol {
+    padding-top: 0.1px;
+    margin-top: 0.1px;
+}
+
+body {
+    background-color: #84e1ad;
+}
+
+main {
+    background-color: white;
+    min-width: 300px;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 0px 0px 10px 10px;
+}
+
+h3 {
+    font-family: 'guanabarafont';     
+    font-size: 2em;
+    color: #1a5c38;
+    padding: 10px 30px;
+}
+
+h4 {
+    font-family: 'guanabarafont';
+    background-image: linear-gradient(to right, #c9edd9, white);
+    margin-left: 20px;
+    color: #1a5c38;
+
+}
+
+p {
+    text-indent: 25px;
+    text-align: justify;
+    margin: 15px 15px 15px 15px;
+}
+
+strong {
+    color: #1a5c38;
+    font-weight: 900;
+}
+
+.linkmain {
+    color: #1a5c38;
+    font-weight: 700;
+}
+
+/* ::after é para toda vez que ter essa classe vai parecer esse simbolo depois, automaticamente */
+
+.linkmain::after {
+    content: ' 📎';
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.androidman {
+    max-width: 280px;
+}
+
+/* Responsividade dos videos, esse position é o essencial tem que ter na div e no iframe que vem ja no codigo do youtube, assim como todas as configuração do videors > iframe */
+.videors {
+    background-color: #1a5c38;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-bottom: 57%;
+    position: relative;
+}
+
+.videors > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+/* No caso aqui eu fiz DOIS box na caixa do aprender mais, o que não deu para fazer uma sombra no box, porém pela imagem que segui, eu não tinha visualizado essa sombra, então não era um dos meus objetivos para fazer o desafio. No caso ele usa uma box só, e o que esta no aprender mais ele utiliza ex: -20px para background color, ficar do mesmo tamanho da div inteira */
+
+.boxfim {
+    margin: auto;
+    max-width: 750px;    
+    background-color: #2fa866;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    padding-bottom: 4px;
+    padding-top: 2px;
+    font-size: 1.3em;
+    
+        
+}
+
+.boxdown {
+    margin: auto;
+    max-width: 750px;
+    background-color: #c5ebd6;
+    border-radius: 0px 0px 10px 10px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    
+}
+
+/* list-stylke-position: inside; para as bolinhas da lista fica dentro da div, e não alocada para fora, */
+
+ul {
+   list-style-position: inside;
+   columns: 2;
+   margin-left: 8px;
+
+}
+
+footer {
+    background-color: #1a5c38;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+footer > p {
+    
+    margin-top: 1px;
+    margin-bottom: 1px;  
+    color: white;
+    text-align: center;
+    
+
+}
